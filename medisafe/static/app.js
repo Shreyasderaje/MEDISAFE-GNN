@@ -53,6 +53,27 @@ document.addEventListener("click", (e) => {
   if (!e.target.closest(".search-row")) suggestions.classList.add("hidden");
 });
 
+// pressing Enter adds the top suggestion as a chip (or runs analysis if full)
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  e.preventDefault();
+  const first = suggestions.querySelector("li");
+  if (first && !suggestions.classList.contains("hidden")) {
+    first.click();
+  } else if (searchInput.value.trim() && selected.length < MAX_DRUGS) {
+    const typed = searchInput.value.trim();
+    fetchDrugs(typed).then((drugs) => {
+      const exact = drugs.find((d) => d.name.toLowerCase() === typed.toLowerCase());
+      if (exact) {
+        selected.push(exact.name);
+        searchInput.value = "";
+        renderChips();
+      }
+    });
+  }
+});
+
+
 function riskClass(p, type) {
   if (type === "contraindicated" || p >= 0.85) return "risk-contraindicated";
   if (type === "major" || p >= 0.7) return "risk-major";
