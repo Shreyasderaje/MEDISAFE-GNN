@@ -34,7 +34,7 @@ def test_index_page(client):
 def test_drug_search(client):
     res = client.get("/api/drugs?q=war")
     assert res.status_code == 200
-    assert "warfarin" in res.get_json()["drugs"]
+    assert {"name": "warfarin"} in res.get_json()["drugs"]
 
 
 def test_predict_endpoint(client):

@@ -11,7 +11,8 @@ const resultsBox = document.getElementById("results");
 async function fetchDrugs(q) {
   const res = await fetch(`/api/drugs?q=${encodeURIComponent(q)}`);
   const data = await res.json();
-  return data.drugs || [];
+  // normalise: accept both "Name" strings and {name: "..."} objects
+  return (data.drugs || []).map((d) => (typeof d === "string" ? { name: d } : d));
 }
 
 function renderChips() {

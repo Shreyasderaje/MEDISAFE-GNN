@@ -52,4 +52,4 @@ class TestEngine:
 
     def test_search(self, engine):
         hits = engine.search_drugs("war")
-        assert "warfarin" in hits
+        assert {"name": "warfarin"} in hits

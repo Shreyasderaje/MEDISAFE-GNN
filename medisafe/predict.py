@@ -219,6 +219,8 @@ class MedisafeEngine:
 
     def search_drugs(self, query: str, limit: int = 10) -> List[Dict]:
         q = query.strip().lower()
-        return [n for n in self.graph.drug_names if q in n.lower()][:limit]
+        return [
+            {"name": n} for n in self.graph.drug_names if q in n.lower()
+        ][:limit]
 
         return g
