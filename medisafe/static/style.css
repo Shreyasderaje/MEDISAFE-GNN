@@ -87,6 +87,11 @@ main { max-width: 980px; margin: 28px auto; padding: 0 24px; }
   border: 1px solid #5e2c3e; border-radius: 6px;
   padding: 4px 10px; margin: 3px 4px 0 0; font-size: 12.5px;
 }
+.effect-tag.documented {
+  display: inline-block; background: #143726; color: #7ddfb0;
+  border: 1px solid #2a5e44; border-radius: 6px;
+  padding: 4px 10px; margin: 3px 4px 0 0; font-size: 12.5px;
+}
 .known-tag {
   display: inline-block; background: #14375a; color: #8ec6ff; border: 1px solid #2c5a8f;
   border-radius: 6px; padding: 4px 10px; font-size: 12.5px; margin-top: 8px;

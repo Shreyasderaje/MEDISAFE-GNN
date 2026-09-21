@@ -94,7 +94,9 @@ function renderPair(pair) {
   card.className = `pair-card ${cls}`;
 
   const effects = pair.adverse_effects
-    .map((e) => `<span class="effect-tag">${e.effect} &middot; ${(e.probability * 100).toFixed(0)}%</span>`)
+    .map((e) => e.source === "documented"
+      ? `<span class="effect-tag documented">&#128218; ${e.effect} &middot; documented</span>`
+      : `<span class="effect-tag">${e.effect} &middot; ${(e.probability * 100).toFixed(0)}%</span>`)
     .join("");
 
   let explanationItems = "";

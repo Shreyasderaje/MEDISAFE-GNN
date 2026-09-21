@@ -2,7 +2,7 @@
   "test_auc": 0.7950138504155124,
   "test_ap": 0.8306105795447912,
   "best_val_auc": 0.9196675900277008,
-  "train_seconds": 1.7,
+  "train_seconds": 1.6,
   "n_drugs": 75,
   "n_interactions": 133,
   "n_adverse_effects": 24,

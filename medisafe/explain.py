@@ -99,15 +99,38 @@ def _shared_annotations(graph: DrugGraph, drug_a: str, drug_b: str) -> List[str]
             " - additive pharmacodynamic effects are plausible."
         )
 
-    for col, label in (("cyp_substrate", "CYP substrate"),
-                       ("cyp_inhibitor", "CYP inhibitor")):
-        a_set = {x.strip() for x in str(ra.get(col, "")).split(";") if x.strip()}
-        b_set = {x.strip() for x in str(rb.get(col, "")).split(";") if x.strip()}
+    def _cyp_set(value) -> set:
+        if value is None or (isinstance(value, float) and value != value):
+            return set()  # NaN
+        s = str(value).strip().lower()
+        if not s or s in ("nan", "none", "null", "nan;"):
+            return set()
+        return {x.strip().lower() for x in s.split(";") if x.strip()
+                and x.strip().lower() not in ("nan", "none", "null")}
+
+    for col_a, col_b, label in (
+        ("cyp_substrate", "cyp_inhibitor", "inhibits the metabolism of"),
+        ("cyp_inhibitor", "cyp_substrate", "levels are raised by"),
+        ("cyp_substrate", "cyp_substrate", "competes with"),
+    ):
+        a_set = _cyp_set(ra.get(col_a))
+        b_set = _cyp_set(rb.get(col_b))
         for enzyme in sorted(a_set & b_set):
-            notes.append(
-                f"Both drugs interact with {enzyme} ({label.lower()}) - "
-                "a metabolic (pharmacokinetic) mechanism is plausible."
-            )
+            if label == "inhibits the metabolism of":
+                notes.append(
+                    f"{drug_b} inhibits {enzyme}, which metabolises {drug_a} - "
+                    f"raised {drug_a} exposure (pharmacokinetic mechanism)."
+                )
+            elif label == "levels are raised by":
+                notes.append(
+                    f"{drug_a} inhibits {enzyme}, which metabolises {drug_b} - "
+                    f"raised {drug_b} exposure (pharmacokinetic mechanism)."
+                )
+            else:
+                notes.append(
+                    f"Both drugs are {enzyme} substrates - metabolic "
+                    "competition is plausible."
+                )
     return notes
 
 

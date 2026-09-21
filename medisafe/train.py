@@ -247,6 +247,8 @@ def save_checkpoint(result: Dict, graph: DrugGraph, path: str = None) -> str:
         "edges": graph.edge_index,
         "edge_type": graph.edge_type,
         "edge_adverse": graph.edge_adverse,
+        "ddi_records": graph.ddi.to_dict(orient="records"),
+        "drug_records": graph.drugs.to_dict(orient="records"),
     }
     torch.save(payload, path)
     with open(path + ".metrics.json", "w", encoding="utf-8") as f:

@@ -44,7 +44,9 @@ class MedisafeEngine:
         payload = torch.load(path, map_location="cpu", weights_only=False)
         cfg = payload.get("config", config.CONFIG)
 
-        drugs = pd.DataFrame({"name": payload["drug_names"]})
+        drugs = pd.DataFrame(
+            payload.get("drug_records", [{"name": n} for n in payload["drug_names"]])
+        )
         features = np.asarray(payload["features"], dtype=np.float32)
         ddi = pd.DataFrame(payload.get("edges", np.zeros((0, 2))),
                            columns=["_i", "_j"])
@@ -67,13 +69,17 @@ class MedisafeEngine:
     def _rebuild_graph(drugs, ddi, features, payload) -> DrugGraph:
         drug_names = list(drugs["name"])
         edges = np.asarray(payload.get("edges", np.zeros((0, 2))), dtype=np.int64)
-        ddi = pd.DataFrame({
-            "drug_1": [drug_names[int(i)] for i, _ in edges],
-            "drug_2": [drug_names[int(j)] for _, j in edges],
-            "interaction_type": ["" for _ in edges],
-            "adverse_effects": ["" for _ in edges],
-            "mechanism": ["documented knowledge base edge" for _ in edges],
-        })
+        records = payload.get("ddi_records")
+        if records:
+            ddi = pd.DataFrame(records)
+        else:
+            ddi = pd.DataFrame({
+                "drug_1": [drug_names[int(i)] for i, _ in edges],
+                "drug_2": [drug_names[int(j)] for _, j in edges],
+                "interaction_type": ["" for _ in edges],
+                "adverse_effects": ["" for _ in edges],
+                "mechanism": ["documented knowledge base edge" for _ in edges],
+            })
         g = DrugGraph.__new__(DrugGraph)
         g.drug_names = drug_names
         g.name_to_idx = {n: i for i, n in enumerate(drug_names)}
@@ -146,16 +152,34 @@ class MedisafeEngine:
 
         adverse: List[Dict] = []
         probs = a_probs[0].cpu().numpy()
-        thr = config.CONFIG["adverse_effect_threshold"]
+        # adaptive threshold: keep top effects at >= 35% of the max score
+        # (absolute probabilities run low on small multi-label data)
+        thr = max(0.08, 0.35 * float(probs.max()))
+        shown = 0
         for k in np.argsort(-probs):
-            if probs[k] < thr:
+            if probs[k] < thr or shown >= 4:
                 break
             adverse.append({
                 "effect": self.graph.adverse_vocab[int(k)],
                 "probability": round(float(probs[k]), 4),
+                "source": "predicted",
             })
+            shown += 1
 
         known = self.is_known_interaction(drug_a, drug_b)
+
+        # documented effects from the knowledge base always lead the list
+        if known is not None and str(known["adverse_effects"]).strip():
+            documented = [
+                s.strip().lower() for s in str(known["adverse_effects"]).split(";")
+                if s.strip()
+            ]
+            doc_set = set(documented)
+            adverse = (
+                [{"effect": eff, "probability": None, "source": "documented"}
+                 for eff in documented]
+                + [a for a in adverse if a["effect"] not in doc_set]
+            )
         explanation = explain_pair(
             self.graph, self.model, self._X, self._A, drug_a, drug_b
         )
