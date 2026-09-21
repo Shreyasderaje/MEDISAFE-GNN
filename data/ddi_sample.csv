@@ -1,0 +1,135 @@
+drug_1,drug_2,interaction_type,adverse_effects,mechanism
+warfarin,aspirin,major,gastrointestinal hemorrhage;bleeding;anemia,CYP2C9 inhibition plus additive antiplatelet effect
+warfarin,ibuprofen,major,gastrointestinal hemorrhage;bleeding,NSAID platelet inhibition and gastric mucosal injury plus protein binding displacement
+warfarin,diclofenac,major,gastrointestinal hemorrhage;bleeding,NSAID platelet inhibition and gastric mucosal injury
+warfarin,fluconazole,major,bleeding;increased INR;hematoma,CYP2C9 inhibition reduces warfarin metabolism
+warfarin,amiodarone,major,bleeding;increased INR,CYP2C9 and CYP3A4 inhibition reduces warfarin clearance
+warfarin,metronidazole,major,bleeding;increased INR,CYP2C9 inhibition reduces warfarin metabolism
+warfarin,co-trimoxazole,major,bleeding;increased INR,Sulfamethoxazole displaces warfarin and inhibits CYP2C9
+warfarin,carbamazepine,moderate,thrombosis;reduced anticoagulation,CYP2C9 and CYP3A4 induction accelerates warfarin clearance
+warfarin,rifampin,major,thrombosis;reduced anticoagulation,CYP3A4 induction accelerates warfarin clearance
+warfarin,phenytoin,moderate,variable INR;bleeding,CYP2C9 competition and inhibition between the two drugs
+warfarin,terbinafine,moderate,bleeding;increased INR,CYP2C9 inhibition reported with terbinafine
+warfarin,ciprofloxacin,moderate,bleeding;increased INR,CYP2C9 inhibition by fluoroquinolones
+warfarin,phenobarbital,moderate,thrombosis;reduced anticoagulation,enzyme induction accelerates warfarin clearance
+clopidogrel,omeprazole,moderate,reduced antiplatelet effect;myocardial infarction risk,CYP2C19 inhibition impairs conversion of clopidogrel to its active metabolite
+clopidogrel,pantoprazole,minor,reduced antiplatelet effect,CYP2C19 inhibition is weaker than with omeprazole
+clopidogrel,fluoxetine,moderate,reduced antiplatelet effect;bleeding,CYP2D6 inhibition impairs clopidogrel activation
+aspirin,clopidogrel,major,bleeding;gastrointestinal hemorrhage,additive antiplatelet effects
+aspirin,warfarin,major,gastrointestinal hemorrhage;bleeding;anemia,additive anticoagulant and antiplatelet effects
+aspirin,methotrexate,major,pancytopenia;stomatitis;anemia,reduced renal clearance of methotrexate
+aspirin,sodium valproate,major,valproate toxicity;drowsiness;tremor,protein binding displacement of valproate
+simvastatin,clarithromycin,major,myopathy;rhabdomyolysis;myalgia,CYP3A4 inhibition raises simvastatin exposure
+simvastatin,fluconazole,moderate,myopathy;rhabdomyolysis,CYP3A4 inhibition raises simvastatin exposure
+simvastatin,gemfibrozil,major,myopathy;rhabdomyolysis,additive inhibition of statin uptake transporters
+simvastatin,itraconazole,major,rhabdomyolysis;myopathy,strong CYP3A4 inhibition raises simvastatin exposure
+simvastatin,cyclosporine,major,myopathy;rhabdomyolysis,CYP3A4 inhibition and transporter overlap
+simvastatin,amiodarone,moderate,myopathy;rhabdomyolysis,CYP3A4 inhibition raises simvastatin exposure
+atorvastatin,clarithromycin,major,myopathy;rhabdomyolysis,CYP3A4 inhibition raises atorvastatin exposure
+atorvastatin,cyclosporine,major,myopathy;rhabdomyolysis,CYP3A4 inhibition and transporter overlap
+atorvastatin,amiodarone,moderate,myopathy;myalgia,CYP3A4 inhibition raises atorvastatin exposure
+lisinopril,spironolactone,major,hyperkalemia;arrhythmia,additive potassium retention through RAAS blockade
+lisinopril,potassium chloride,major,hyperkalemia;arrhythmia,ACE inhibition reduces aldosterone and potassium excretion
+lisinopril,ibuprofen,major,renal impairment;hyperkalemia;reduced antihypertensive effect,prostaglandin mediated reduction of renal perfusion
+lisinopril,aspirin,moderate,renal impairment;reduced antihypertensive effect,prostaglandin mediated reduction of renal perfusion
+lisinopril,hydrochlorothiazide,moderate,hypotension;dehydration;electrolyte imbalance,additive blood pressure lowering
+spironolactone,potassium chloride,contraindicated,hyperkalemia;cardiac arrhythmia;cardiac arrest,both drugs raise serum potassium directly
+spironolactone,co-trimoxazole,major,hyperkalemia;sudden cardiac death,trimethoprim behaves like an amiloride-like diuretic
+spironolactone,hydrochlorothiazide,moderate,hyperkalemia;hyponatremia;electrolyte imbalance,opposite effects on potassium handling may mask electrolyte shifts
+
+digoxin,amiodarone,major,digoxin toxicity;nausea;visual disturbances;arrhythmia,P-glycoprotein and renal clearance inhibition raises digoxin levels
+digoxin,verapamil,major,digoxin toxicity;bradycardia;arrhythmia,P-glycoprotein inhibition raises digoxin levels
+digoxin,diltiazem,moderate,digoxin toxicity;bradycardia,P-glycoprotein inhibition raises digoxin levels
+digoxin,furosemide,major,arrhythmia;digoxin toxicity;hypokalemia,diuretic induced hypokalemia potentiates digoxin
+digoxin,quinidine,major,digoxin toxicity;arrhythmia;nausea,P-glycoprotein inhibition and displacement of digoxin
+digoxin,itraconazole,moderate,digoxin toxicity,alteration of gut flora and transporter effects
+digoxin,clarithromycin,major,digoxin toxicity;arrhythmia,P-glycoprotein inhibition reduces digoxin efflux
+digoxin,spironolactone,moderate,digoxin toxicity;arrhythmia,pharmacodynamic potassium shifts
+verapamil,metoprolol,major,bradycardia;heart block;hypotension,CYP2D6 inhibition and additive AV nodal blockade
+verapamil,propranolol,major,bradycardia;heart block;hypotension,additive AV nodal blockade
+verapamil,atenolol,major,bradycardia;heart block,additive AV nodal blockade
+verapamil,sildenafil,moderate,hypotension,synergistic vasodilation
+diltiazem,metoprolol,major,bradycardia;heart block;hypotension,additive AV nodal blockade
+diltiazem,simvastatin,major,myopathy;rhabdomyolysis,moderate CYP3A4 inhibition raises simvastatin exposure
+amlodipine,simvastatin,minor,myopathy,CYP3A4 inhibition is mild with amlodipine
+metoprolol,fluoxetine,moderate,bradycardia;hypotension,CYP2D6 inhibition reduces metoprolol metabolism
+metoprolol,paroxetine,major,bradycardia;hypotension,CYP2D6 inhibition reduces metoprolol metabolism
+propranolol,fluoxetine,moderate,bradycardia;hypotension,CYP2D6 inhibition
+sildenafil,nitroglycerin,contraindicated,severe hypotension;syncope;cardiac arrest,synergistic nitric oxide mediated vasodilation
+sildenafil,isosorbide mononitrate,contraindicated,severe hypotension;syncope,synergistic nitric oxide mediated vasodilation
+sildenafil,tamsulosin,moderate,hypotension;syncope;dizziness,additive vasodilation and alpha blockade
+tamsulosin,verapamil,moderate,hypotension;dizziness,additive vasodilation
+phenelzine,fluoxetine,contraindicated,serotonin syndrome;hyperthermia;hypertensive crisis,dangerous serotonergic and monoamine excess
+phenelzine,sertraline,contraindicated,serotonin syndrome;hyperthermia,dangerous serotonergic excess
+phenelzine,tramadol,contraindicated,serotonin syndrome;seizure;hypertensive crisis,monoamine excess and seizure threshold lowering
+phenelzine,amitriptyline,contraindicated,hypertensive crisis;seizure;hyperthermia,monoamine excess
+linezolid,fluoxetine,major,serotonin syndrome;hypertension,linezolid is a weak MAO inhibitor
+linezolid,sertraline,major,serotonin syndrome,additive serotonergic activity
+fluoxetine,tramadol,major,serotonin syndrome;seizure,CYP2D6 inhibition and additive serotonergic activity
+sertraline,tramadol,major,serotonin syndrome;seizure,additive serotonergic activity
+fluoxetine,sumatriptan,major,serotonin syndrome;hypertension,additive serotonergic activity
+sertraline,sumatriptan,moderate,serotonin syndrome,additive serotonergic activity
+fluoxetine,amitriptyline,major,tca toxicity;cardiac arrhythmia;sedation,CYP2D6 inhibition raises TCA levels
+paroxetine,amitriptyline,major,tca toxicity;cardiac arrhythmia,CYP2D6 inhibition raises TCA levels
+citalopram,ondansetron,moderate,qt prolongation;torsades de pointes,additive QT prolongation
+citalopram,amiodarone,major,qt prolongation;torsades de pointes,additive QT prolongation
+fluoxetine,aspirin,moderate,gastrointestinal hemorrhage;bleeding,SSRIs impair platelet aggregation
+fluoxetine,ibuprofen,moderate,gastrointestinal hemorrhage,SSRI and NSAID additive bleeding risk
+carbamazepine,clarithromycin,major,carbamazepine toxicity;ataxia;diplopia;hyponatremia,CYP3A4 inhibition reduces carbamazepine clearance
+carbamazepine,fluconazole,major,carbamazepine toxicity;ataxia;dizziness,CYP3A4 inhibition reduces carbamazepine clearance
+carbamazepine,sodium valproate,major,valproate toxicity;thrombocytopenia;lethargy,valproate inhibits epoxide hydrolase and CBZ induces valproate clearance
+carbamazepine,lamotrigine,moderate,rash;hyponatremia,carbamazepine induces lamotrigine glucuronidation
+carbamazepine,cyclosporine,major,reduced immunosuppression;transplant rejection,CYP3A4 induction accelerates cyclosporine clearance
+phenytoin,fluconazole,major,phenytoin toxicity;nystagmus;ataxia,CYP2C9 inhibition reduces phenytoin clearance
+phenytoin,amiodarone,major,phenytoin toxicity;ataxia;nystagmus,CYP2C9 inhibition reduces phenytoin clearance
+phenytoin,sodium valproate,major,phenytoin toxicity;drowsiness,protein binding displacement of phenytoin
+sodium valproate,lamotrigine,major,lamotrigine toxicity;severe rash;stevens johnson syndrome,valproate inhibits glucuronidation of lamotrigine
+sodium valproate,phenobarbital,major,phenobarbital toxicity;sedation;respiratory depression,valproate inhibits phenobarbital metabolism
+sodium valproate,aspirin,major,valproate toxicity;drowsiness;tremor,protein binding displacement
+theophylline,ciprofloxacin,major,theophylline toxicity;seizure;tachycardia,CYP1A2 inhibition reduces theophylline clearance
+theophylline,clarithromycin,moderate,theophylline toxicity;tachycardia,CYP1A2 inhibition reduces theophylline clearance
+theophylline,fluvoxamine,major,theophylline toxicity;seizure;arrhythmia,CYP1A2 inhibition markedly reduces theophylline clearance
+methotrexate,ibuprofen,major,pancytopenia;stomatitis;mucositis,reduced renal clearance of methotrexate
+methotrexate,diclofenac,major,pancytopenia;stomatitis,reduced renal clearance of methotrexate
+methotrexate,co-trimoxazole,contraindicated,pancytopenia;sepsis;stomatitis,additive antifolate toxicity
+methotrexate,amiodarone,moderate,methotrexate toxicity,transporter mediated redistribution of methotrexate
+allopurinol,azathioprine,major,leukopenia;pancytopenia;anemia,xanthine oxidase inhibition blocks azathioprine inactivation
+allopurinol,methotrexate,major,methotrexate toxicity;mucositis,additive antimetabolite stress
+azathioprine,lisinopril,moderate,anemia;leukopenia,unexplained interaction reported with ACE inhibitors
+gentamicin,furosemide,major,ototoxicity;hearing loss;vertigo,additive ototoxicity
+gentamicin,vancomycin,major,nephrotoxicity;ototoxicity,additive nephrotoxicity
+gentamicin,cyclosporine,major,nephrotoxicity,additive nephrotoxicity
+cyclosporine,ibuprofen,major,nephrotoxicity;renal impairment,additive renal vasoconstriction
+cyclosporine,rifampin,major,reduced immunosuppression;transplant rejection,CYP3A4 induction accelerates cyclosporine clearance
+cyclosporine,fluconazole,moderate,nephrotoxicity;immunosuppression,CYP3A4 inhibition raises cyclosporine levels
+lithium,ibuprofen,major,lithium toxicity;tremor;confusion,reduced renal lithium clearance
+lithium,diclofenac,major,lithium toxicity;confusion,reduced renal lithium clearance
+lithium,hydrochlorothiazide,major,lithium toxicity;tremor,thiazide increases proximal lithium reabsorption
+lithium,lisinopril,major,lithium toxicity;confusion,ACE inhibition raises lithium levels
+lithium,haloperidol,major,neurotoxicity;confusion;extrapyramidal symptoms,additive neurotoxicity
+lithium,sertraline,moderate,serotonin syndrome;tremor,additive serotonergic activity
+haloperidol,citalopram,moderate,qt prolongation;torsades de pointes,additive QT prolongation
+haloperidol,risperidone,moderate,extrapyramidal symptoms;sedation,additive dopamine antagonism
+risperidone,fluoxetine,moderate,extrapyramidal symptoms;sedation,CYP2D6 inhibition raises risperidone levels
+morphine,diazepam,major,respiratory depression;sedation;death,additive CNS and respiratory depression
+morphine,zolpidem,major,respiratory depression;sedation,additive CNS depression
+oxycodone,diazepam,major,respiratory depression;sedation;death,additive CNS and respiratory depression
+oxycodone,fluconazole,moderate,opioid toxicity;respiratory depression,CYP3A4 inhibition raises oxycodone exposure
+tramadol,diazepam,major,respiratory depression;seizure,additive CNS depression and seizure risk
+codeine,fluoxetine,moderate,reduced analgesia,CYP2D6 inhibition blocks conversion of codeine to morphine
+diazepam,omeprazole,moderate,excessive sedation,CYP2C19 inhibition prolongs diazepam effect
+levothyroxine,calcium carbonate,moderate,reduced thyroid hormone absorption,chelation and adsorption in the gut
+levothyroxine,ferrous sulfate,moderate,reduced thyroid hormone absorption,chelation in the gastrointestinal tract
+tetracycline,calcium carbonate,moderate,reduced antibiotic absorption,chelation in the gastrointestinal tract
+tetracycline,ferrous sulfate,moderate,reduced antibiotic absorption,chelation in the gastrointestinal tract
+colchicine,clarithromycin,contraindicated,colchicine toxicity;multiorgan failure,both CYP3A4 and P-glycoprotein inhibition
+colchicine,cyclosporine,major,colchicine toxicity;myopathy,P-glycoprotein inhibition
+ketoconazole,simvastatin,contraindicated,rhabdomyolysis;myopathy,potent CYP3A4 inhibition raises statin exposure
+ketoconazole,quinidine,major,qt prolongation;torsades de pointes,quinidine levels rise with CYP3A4 inhibition
+itraconazole,quinidine,contraindicated,qt prolongation;torsades de pointes,potent CYP3A4 inhibition raises quinidine exposure
+amiodarone,sotalol,major,qt prolongation;torsades de pointes;bradycardia,additive QT prolongation
+amiodarone,ondansetron,major,qt prolongation;torsades de pointes,additive QT prolongation
+quinidine,ondansetron,major,qt prolongation;torsades de pointes,additive QT prolongation
+sotalol,atenolol,major,bradycardia;heart block,additive beta blockade
+metoprolol,atenolol,major,bradycardia;hypotension,additive beta blockade
+theophylline,phenobarbital,moderate,reduced bronchodilation,enzyme induction accelerates theophylline clearance

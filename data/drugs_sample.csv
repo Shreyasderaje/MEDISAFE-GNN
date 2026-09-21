@@ -1,0 +1,78 @@
+name,smiles,atc_class,cyp_substrate,cyp_inhibitor
+warfarin,CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O,anticoagulant;vitamin K antagonist,CYP2C9;CYP3A4,
+aspirin,CC(=O)OC1=CC=CC=C1C(=O)O,nsaid;antiplatelet,,
+ibuprofen,CC(C)CC1=CC=C(C=C1)C(C)C(=O)O,nsaid,CYP2C9,
+diclofenac,OC(=O)Cc1ccccc1Nc1c(Cl)cccc1,nsaid,CYP2C9,
+clopidogrel,COC(=O)[C@@H](N1CCc2sccc2C1)c3ccccc3Cl,antiplatelet;P2Y12 inhibitor,CYP2C19,
+fluconazole,OC(Cn1cnc2cc(Cl)ccc21)Cn3cnc4cc(Cl)ccc43,azole antifungal,,CYP2C9;CYP3A4
+amiodarone,CCC(CC)COc1ccc2c(c1)oc1cc(I)c(C(=O)c3cc(OCCN(CC)CC)c(I)cc3I)c1c2,antiarrhythmic;class III,CYP3A4,CYP2C9;CYP2D6;CYP3A4
+metronidazole,CC1=CN(CCO)C(=N1)[N+](=O)[O-],antibiotic;nitroimidazole,,
+co-trimoxazole,Cc1cc(NS(=O)(=O)c2ccc(N)cc2)on1,antibiotic;folate antagonist,,
+omeprazole,COc1ccc2[nH]c([S+]([O-])Cc3ncc(C)c(OC)c3C)c2c1,proton pump inhibitor,CYP2C19,CYP2C19
+pantoprazole,COc1cc2[nH]c([S+]([O-])Cc3ncc(C)c(OC(F)F)c3C)c2cc1OC,proton pump inhibitor,CYP2C19,
+simvastatin,CCC(C)C(=O)O[C@H]1CC[C@@]2(C)[C@@H](CC[C@]2(O)C=CC[C@@H](C)C(=O)OC)C,statin;lipid lowering,CYP3A4,
+atorvastatin,CCC(C)c1c(C(=O)Nc2ccccc2)c(-c3ccccc3)c(-c4ccc(F)cc4)c1OC(=O)CC(O)CO,statin;lipid lowering,CYP3A4,
+gemfibrozil,CC(C)COc1cc(C)c(C(=O)O)cc1C(C)C,fibrate;lipid lowering,,
+clarithromycin,CC[C@H]1OC(=O)[C@H](C)[C@@H](O)[C@H](C)[C@@H](O)[C@H](C)[C@H](O)[C@@H](C)C[C@@](C)(O)[C@@H](OC2C(O)C(C)OC(C)C2O)C[C@H](C)C1,macrolide antibiotic,CYP3A4,CYP3A4
+erythromycin,CC[C@H]1OC(=O)[C@H](C)[C@@H](O)[C@H](C)[C@@H](O)[C@H](C)[C@H](O)[C@@H](C)C[C@@](C)(O)[C@@H](O)C[C@H](C)C1,macrolide antibiotic,CYP3A4,CYP3A4
+lisinopril,N[C@@H](CCCC)C(=O)N[C@@H](CC1CCCC1)C(=O)O,ace inhibitor;antihypertensive,,
+spironolactone,CC12CCC3C(CCC(=O)C3=C1)C1CCC4(C)C(CCC(=O)OC4(C)C1)C2,potassium sparing diuretic;aldosterone antagonist,CYP3A4,
+hydrochlorothiazide,N=S(=O)(N)c1ccc(Cl)c(S(=O)(=O)N)c1,thiazide diuretic;antihypertensive,,
+furosemide,Cc1oc(=O)c(C)c1Nc1ccc(S(=O)(=O)N)c(Cl)c1,loop diuretic;antihypertensive,,
+potassium chloride,[K+].[Cl-],potassium supplement,,
+digoxin,O[C@@H]1[C@H](O)[C@@H](O)[C@H](O[C@H]1O)O,cardiac glycoside;inotrope,,P-glycoprotein
+verapamil,COc1ccc(CCN(C)CCCN(C)CCc2cc(OC)c(OC)cc2)cc1OC,calcium channel blocker;non dihydropyridine,CYP3A4,CYP3A4;P-glycoprotein
+diltiazem,COc1ccc2c(c1OC)[C@H]1C(=O)N(C)C[C@H](OC)C2Sc2ccccc21,calcium channel blocker;non dihydropyridine,CYP3A4,CYP3A4;P-glycoprotein
+amlodipine,CCOC(=O)CN(CCO)c1cc(Cl)c(NC(=O)Cc2ccccc2)cc1OC,calcium channel blocker;dihydropyridine,CYP3A4,
+metoprolol,CCOC(=O)C(COCc1cccc(O)c1)NCCc1ccccc1,beta blocker;cardioselective,CYP2D6,
+
+codeine,CN(C)CC1CCC(O)(c1ccccc1)C1,opioid analgesic;prodrug,CYP2D6,
+atenolol,CC(C)NCC(O)COc1ccc(CC(N)=O)cc1,beta blocker;cardioselective,,
+propranolol,CC(C)NCC(O)COc1cccc2ccccc12,beta blocker;nonselective,CYP2D6,
+sildenafil,Cc1cc(OCCC)c(N2CCN(C)CC2)c2c1n(C)c1cc(=O)n(C)c(=O)n1C2,pde5 inhibitor,CYP3A4,
+tamsulosin,CC(C)(C)c1cc(NS(=O)(=O)c2ccc(OCC3CCNCC3)cc2)cc(OC)c1,alpha blocker;uroselective,CYP2D6,
+nitroglycerin,[O-][N+](=O)OCC(CO[N+](=O)[O-])CO[N+](=O)[O-],nitrate;vasodilator,,
+isosorbide mononitrate,[O-][N+](=O)OC1CC2OCC1CO2,nitrate;vasodilator,,
+phenelzine,NCCCN,mao inhibitor;antidepressant,,
+fluoxetine,CNCCC(Oc1ccc(C(F)(F)F)cc1)c1ccccc1,ssri antidepressant,CYP2D6,CYP2D6
+sertraline,Clc1ccc2c(c1)NC[C@H]1N[C@@H]2CC[C@H]1c1ccccc1,ssri antidepressant,CYP2D6,CYP2D6
+paroxetine,Fc1ccc(O2CCNC2)c(c1)OC1CCC(N2CCNCC2)CC1,ssri antidepressant,CYP2D6,CYP2D6
+citalopram,CN(C)CCCC1(C#N)c2ccc(F)cc2OC1c1ccc(C#N)cc1,ssri antidepressant,CYP2D6,
+fluvoxamine,CCOCC(=O)NCCc1c(OCC)cccc1NC(=O)c1ccc(F)cc1,ssri antidepressant,,CYP1A2
+tramadol,CN(C)CC1CCC(CC1)(O)c1cccc(OC)c1,opioid;atypical,CYP2D6,
+sumatriptan,CN(C)CCc1c[nH]c2ccc(CS(=O)(=O)NC)cc12,triptan;migraine therapy,CYP1A2,
+amitriptyline,CN(C)CCC=C1c2ccccc2CCc2ccccc21,tricyclic antidepressant,CYP2D6,
+linezolid,CC(=O)NC[C@H]1CN(C(=O)O1)c1ccc(F)c(N2CCOCC2)c1,antibiotic;oxazolidinone,,mao
+carbamazepine,NC(=O)N1c2ccccc2C=Cc2ccccc21,antiepileptic,CYP3A4,CYP3A4
+phenytoin,O=C1NC(=O)C(N1)(c1ccccc1)c1ccccc1,antiepileptic,CYP2C9,CYP2C9
+sodium valproate,CCCC(C)CC([O-])=O.[Na+],antiepileptic,CYP2C9,
+lamotrigine,Nc1nc(N)c(-c2ccc(Cl)c(Cl)c2)nn1,antiepileptic,,
+phenobarbital,O=C1NC(=O)NC(C1)(c1ccccc1)CC,antiepileptic;barbiturate,CYP2C9,
+theophylline,Cn1c(=O)c2[nH]cnc2n(C)c1=O,bronchodilator;methylxanthine,CYP1A2,
+ciprofloxacin,O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc12,fluoroquinolone antibiotic,,CYP1A2
+methotrexate,CN(CC1=C(C)N=C(N)N=C1)C(=O)[C@@H](N)Cc1ccc(O)cc1,antimetabolite;dmard,,
+allopurinol,O=c1[nH]cnc2[nH]ncc12,xanthine oxidase inhibitor;antigout,,
+azathioprine,Cn1cc([N+](=O)[O-])nc1Sc1ncnc2[nH]cnc12,immunosuppressant,,
+gentamicin,NC1C(O)C(O)C(CO)OC1OC1C(O)C(N)C(N)CC1O,aminoglycoside antibiotic,,
+vancomycin,CC(C)[C@H](NC(=O)[C@@H](N)Cc1ccc(O)cc1)C(=O)N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CO)C(=O)O,glycopeptide antibiotic,,
+cyclosporine,CC[C@@H]1NC(=O)[C@H](C)N(C)C(=O)[C@@H](CC(C)C)N(C)C(=O)[C@H](C(C)C)OC(=O)[C@@H]1C,immunosuppressant,CYP3A4,CYP3A4
+lithium,[Li+],mood stabilizer,,
+haloperidol,O=C(C1CCC(O)(CCF)CC1)CN1CCC(c2ccc(Cl)cc2)=NC1,antipsychotic;butyrophenone,CYP3A4,CYP2D6
+risperidone,CN1CCN(CC1)c1cc2c(cc1)N(C(=O)N(C2=O)CCC1CCOC1)c1ccccc1,antipsychotic;atypical,CYP2D6,
+morphine,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@@H]3C1,opioid analgesic,CYP2D6,
+oxycodone,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)CC[C@@H]3C1,opioid analgesic,CYP3A4,CYP2D6
+diazepam,O=C1CN=C(c2ccccc2N1C)c1ccc(Cl)cc1,benzodiazepine,CYP2C19,CYP2C19
+zolpidem,Cc1cc2nc(C(C)(C)c3ccccc3)ncc2n1CC(=O)N(C)C,hypnotic;z drug,CYP3A4,
+levothyroxine,N[C@@H](Cc1ccc(O)c(I)c1)c1cc(I)c(O)c(I)c1,thyroid hormone,,
+calcium carbonate,[Ca+2].[O-]C([O-])=O,calcium supplement;antacid,,
+ferrous sulfate,[Fe+2].[O-]S([O-])(=O)=O,iron supplement,,
+tetracycline,CC1(O)C(O)=C2C(=O)c3c(O)cccc3C(C)(O)[C@H]2[C@@H](C(=O)O)C1,tetracycline antibiotic,,
+colchicine,COc1cc2c(cc1OC)C(=O)CC[C@@H](NC(C)=O)c1c(OC)cccc21,antigout;antimitotic,CYP3A4,
+ketoconazole,CC(=O)N1CCN(CC1)c1ccc(OC2CO[C@@](Cn3ccnc3)(c3ccc(Cl)cc3Cl)CO2)cc1,azole antifungal,,CYP3A4
+itraconazole,CC(O)C(C)(C)n1ccnc1Cc1ccc(OC2CO[C@](Cn3ccnc3)(c3ccc(Cl)cc3Cl)CO2)cc1,azole antifungal,,CYP3A4
+terbinafine,CC(C)(C)C#CC=CC=Cc1ccccc1N(C)C,antifungal;allylamine,,
+rifampin,COc1ccc2C(=O)NC(=O)c3c(O)cccc3Oc2c1,antibiotic;antitubercular,CYP3A4,
+sotalol,CC(C)NCC(O)c1ccc(NS(C)(=O)=O)cc1,beta blocker;class iii antiarrhythmic,,
+quinidine,COc1ccc2c(c1)[C@@H]1CCN(C)CC1[C@H](O)C2,class i antiarrhythmic;alkaloid,CYP3A4,CYP2D6
+ondansetron,CN1CCN(CC1)C(=O)c1cc2ccc(C)n2n1,antiemetic;5ht3 antagonist,CYP3A4,
+
