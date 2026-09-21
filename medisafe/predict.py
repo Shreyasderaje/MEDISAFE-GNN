@@ -115,7 +115,7 @@ class MedisafeEngine:
         result = train_model(self.graph)
         self.model = result["model"]
         self.metrics = result["metrics"]
-        save_checkpoint(result, self.graph)
+        save_checkpoint(result, self.graph, path=self.checkpoint_path)
         self._prepare()
         return self.metrics
 
